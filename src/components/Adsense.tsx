@@ -3,9 +3,11 @@ import React, { useEffect } from "react";
 const Adsense: React.FC<{ slot?: string }> = ({ slot }) => {
   useEffect(() => {
     try {
+      /* eslint-disable @typescript-eslint/no-explicit-any */
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
       (window as any).adsbygoogle.push({});
-    } catch (e) {
+      /* eslint-enable @typescript-eslint/no-explicit-any */
+    } catch {
       // ignore
     }
   }, []);
