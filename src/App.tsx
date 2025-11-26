@@ -5,6 +5,7 @@ import ProductCard from "./components/ProductCard";
 type Product = {
   title: string;
   description: string;
+  action: string;
   imgSrc: string;
   imgAlt: string;
   linkLabel: string;
@@ -16,6 +17,7 @@ const freeGift: Product[] = [
   {
     title: "JO MALONE",
     description: "用個資換贈品，字母吊飾（隨機）",
+    action: "填單選擇領取地點",
     imgSrc:
       "https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1763916133/MEITU_20251124_004052927_s44u5x.jpg",
     imgAlt: "Jo malone",
@@ -29,6 +31,7 @@ const catCafes: Product[] = [
   {
     title: "The Little Plan café",
     description: "這在河內，就...有路過的話可以去XD",
+        action: "Google map:",
     imgSrc:
       "https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1763909112/the_little_plan_cafe_mbvxrj.jpg",
     imgAlt: "The Little Plan café 的貓咪照片",
@@ -39,6 +42,7 @@ const catCafes: Product[] = [
   {
     title: "Toast Chat",
     description: "國父紀念館附近，店裡有很多可愛的貓。通常都在睡覺。",
+        action: "Google map:",
     imgSrc:
       "https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1763909053/20251120_213310_toafoc.jpg",
     imgAlt: "Toast Chat 的貓咪照片",
@@ -49,12 +53,7 @@ const catCafes: Product[] = [
 
 const App: React.FC = () => {
   return (
-    <div
-      className="min-h-screen bg-[#fef8f1] bg-no-repeat bg-top bg-contain px-5 py-5"
-      style={{
-        backgroundImage: "url('images/banner/banner.png')",
-      }}
-    >
+    <div className="">
       <Header />
       {/* Ads slot */}
       <div className="my-6 text-center">

@@ -1,19 +1,18 @@
 import React from "react";
 
 const Header: React.FC = () => (
-  <header className="flex items-center justify-between px-5 mb-6">
+  <header className="main-header">
     <a
       href="https://www.threads.com/@say.yes.to.heaven.c"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center text-black no-underline"
+      className="header-link-wrapper"
     >
       <img
-        src="images/threads_icon.png"
-        alt="Threads 連結"
-        className="h-10 rounded-lg mr-4 cursor-pointer"
+        src="/assets/threads_icon.png"
+        className="threads-icon"
       />
-      <h1 className="text-4xl m-0 select-none font-bold">Caroline&apos;s Picks</h1>
+      <h1 className="site-title">Caroline&apos;s Picks</h1>
     </a>
   </header>
 );

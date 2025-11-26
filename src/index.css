@@ -1,0 +1,310 @@
+:root {
+    /* 定義半透明白色變數 */
+    --bg-transparent: rgba(255, 255, 255, 0.5);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* 如果要全部垂直置中可改成 center */
+    min-height: 100vh;
+}
+
+/* 主要內容的最大寬度與水平置中 */
+.table-wrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.site-title {
+    text-align: center;
+}
+
+.main-header {
+    justify-content: center;
+    width: 100%;
+}
+
+/* Free Gift 標題置中 */
+h2 {
+    text-align: center;
+}
+
+/* 讓 image-container 水平置中 */
+.image-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 調整行為/圖片/表格置中 */
+.product-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-cell {
+    text-align: center;
+}
+
+/* 預設桌面/平板樣式 */
+.header-link-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Threads Icon 圖示 */
+.threads-icon {
+    height: 45px;
+    width: auto;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* 主標題 */
+.site-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('https://res.cloudinary.com/dfzjtpp8f/image/upload/v1764079669/banner_cu74sv.png');
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #fef8f1;
+}
+
+/* 主標題容器置中 */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* Threads Icon 子樣式 */
+.threads-icon {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 15px;
+}
+
+.header-banner {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header-banner img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ads-container {
+    width: 100%;
+    text-align: center;
+    margin: 25px 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    min-height: 0;
+}
+
+.table-wrapper {
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: var(--bg-transparent);
+    border-radius: 15px;
+    padding: 20px;
+    
+}
+
+.product-table td {
+    border: none !important;
+    padding: 10px 15px;
+    text-align: left;
+    position: relative;
+}
+
+.photo-cell {
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    background-color: transparent !important;
+}
+
+.image-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    border-radius: 8px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.content-cell {
+    border-left: none !important;
+    width: 70%;
+}
+
+.description-area {
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.link-area a {
+    color: steelblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 手機模式優化 */
+@media (max-width: 600px) {
+    .header-link-wrapper {
+        flex-shrink: 1;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .threads-icon {
+        height: 30px;
+        margin-right: 8px;
+        flex-shrink: 0;
+    }
+
+    .site-title {
+        font-size: 1.8rem !important;
+        min-width: 0;
+    }
+
+    .table-wrapper {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .product-table th {
+        background-color: transparent;
+    }
+
+    .product-table tr {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 25px;
+        display: block;
+        width: 100%;
+    }
+
+    .product-table td {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .product-table thead {
+        display: none;
+    }
+
+    .product-table {
+        border: none;
+        margin-bottom: 0;
+    }
+
+    .photo-cell {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+        width: 100%;
+        display: block;
+    }
+
+    .photo-cell img {
+        margin: 0 auto !important;
+        display: block;
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .image-container {
+        width: 100%;
+        margin: 0 auto !important;
+        height: auto;
+    }
+
+    .image-container img {
+        object-fit: cover;
+    }
+
+    .content-cell {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 5px !important;
+        padding-bottom: 15px !important;
+        text-align: left;
+    }
+
+    .content-cell a,
+    .content-cell p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .link-area a {
+        font-size: 0.95rem;
+    }
+}

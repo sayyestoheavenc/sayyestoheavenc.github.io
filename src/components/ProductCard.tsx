@@ -3,6 +3,7 @@ import React from "react";
 type Product = {
   title: string;
   description: string;
+  action:string;
   imgSrc: string;
   imgAlt: string;
   linkLabel: string;
@@ -16,30 +17,34 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="flex flex-col sm:flex-row mb-8 border-b border-dashed border-gray-300 pb-6">
-      <div className="sm:w-1/3 flex justify-center mb-4 sm:mb-0">
-        <div className="w-48 h-48 overflow-hidden rounded-lg shadow-lg bg-transparent">
+   <div className="table-wrapper bg-white bg-opacity-50 rounded-xl p-6 shadow-md">
+    
+     <div className="flex gap-6 items-start">
+        {/* 圖片區域 */}
+        <div className="flex-shrink-0">
           <img
             src={product.imgSrc}
             alt={product.imgAlt}
-            className="w-full h-full object-cover rounded-lg"
+            className="w-48 h-48 object-cover rounded-lg"
           />
         </div>
-      </div>
-      <div className="sm:w-2/3 pl-0 sm:pl-6 text-left">
-        <h3 className="mt-0 mb-2 text-xl font-semibold">{product.title}</h3>
-        <p className="mb-2">{product.description}</p>
-        <div className="link-area">
-          <strong>填單選擇領取地點:</strong>
-          <p className="my-1"></p>
-          <a
-            href={product.linkUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-steelblue-600 font-bold hover:underline"
-          >
-            {product.linkLabel}
-          </a>
+
+        {/* 文字區域 */}
+        <div className="flex-1">
+          <h3 className="mt-0 mb-2 text-xl font-semibold">{product.title}</h3>
+          <p className="mb-2 text-gray-700">{product.description}</p>
+          <div className="link-area mt-4">
+            <strong>填單選擇領取地點:</strong>
+            <p className="my-2"></p>
+            <a
+              href={product.linkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 font-semibold hover:underline"
+            >
+              {product.linkLabel}
+            </a>
+          </div>
         </div>
       </div>
     </div>
