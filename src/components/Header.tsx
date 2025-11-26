@@ -9,7 +9,7 @@ const Header: React.FC = () => (
       className="header-link-wrapper"
     >
       <img
-        src="/assets/threads_icon.png"
+        src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_100,h_100/v1764140180/threads_icon_ztsrsl.png"
         className="threads-icon"
       />
       <h1 className="site-title">Caroline&apos;s Picks</h1>
