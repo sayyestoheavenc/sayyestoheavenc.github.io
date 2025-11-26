@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
+import Adsense from "./components/Adsense";
 
 type Product = {
   title: string;
@@ -56,16 +57,10 @@ const App: React.FC = () => {
     <div className="">
       <Header />
       {/* Ads slot */}
-      <div className="my-6 text-center">
-        <ins
-          className="adsbygoogle inline-block"
-          style={{ display: "block" }}
-          data-ad-client="ca-pub-5378294033772734"
-          data-ad-slot="9988222577"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      </div>
+      <div>
+      {/* ...content... */}
+      <Adsense slot="9988222577" />
+    </div>
 
       <section className="max-w-4xl mx-auto mb-10 bg-white bg-opacity-50 rounded-xl p-6 shadow-md">
         <h2 className="text-2xl font-semibold mb-5">Free Gift</h2>
