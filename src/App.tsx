@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
 import Adsense from "./components/Adsense";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 type Product = {
   title: string;
@@ -79,6 +80,7 @@ const App: React.FC = () => {
       <section id="about" className="mt-10">
         <About />
       </section>
+      <Footer />
     </div>
 
   );
