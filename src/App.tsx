@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import ProductCard from "./components/ProductCard";
 import Adsense from "./components/Adsense";
+import About from "./components/About";
 
 type Product = {
   title: string;
@@ -32,7 +33,7 @@ const catCafes: Product[] = [
   {
     title: "The Little Plan café",
     description: "這在河內，就...有路過的話可以去XD",
-        action: "Google map:",
+    action: "Google map:",
     imgSrc:
       "https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1763909112/the_little_plan_cafe_mbvxrj.jpg",
     imgAlt: "The Little Plan café 的貓咪照片",
@@ -43,7 +44,7 @@ const catCafes: Product[] = [
   {
     title: "Toast Chat",
     description: "國父紀念館附近，店裡有很多可愛的貓。通常都在睡覺。",
-        action: "Google map:",
+    action: "Google map:",
     imgSrc:
       "https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1763909053/20251120_213310_toafoc.jpg",
     imgAlt: "Toast Chat 的貓咪照片",
@@ -58,9 +59,9 @@ const App: React.FC = () => {
       <Header />
       {/* Ads slot */}
       <div>
-      {/* ...content... */}
-      <Adsense slot="9988222577" />
-    </div>
+        {/* ...content... */}
+        <Adsense slot="9988222577" />
+      </div>
 
       <section className="max-w-4xl mx-auto mb-10 bg-white bg-opacity-50 rounded-xl p-6 shadow-md">
         <h2 className="text-2xl font-semibold mb-5">Free Gift</h2>
@@ -75,7 +76,11 @@ const App: React.FC = () => {
           <ProductCard key={idx} product={item} />
         ))}
       </section>
+      <section id="about" className="mt-10">
+        <About />
+      </section>
     </div>
+
   );
 };
 

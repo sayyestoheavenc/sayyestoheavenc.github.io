@@ -14,6 +14,9 @@ const Header: React.FC = () => (
       />
       <h1 className="site-title">Caroline&apos;s Picks</h1>
     </a>
+    <a href="#about" className="text-sm text-slate-700 underline">
+  關於我
+</a>
   </header>
 );
 
