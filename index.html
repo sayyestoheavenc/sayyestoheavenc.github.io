@@ -9,63 +9,76 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCJHERRHRE"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .report-section {
-      background-color: #2b2b2b;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
-    }
-
-    .report-section h2 {
-      margin-top: 0;
-    }
-
-    .stat-box {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .stat-box span {
-      font-size: 18px;
-    }
-
-    .popular-content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
-    }
-
-    .popular-content a {
-      background-color: #3b3b3b;
-      border-radius: 10px;
-      padding: 10px;
-      text-decoration: none;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .popular-content a img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+   body {
+    font-family: "Microsoft YaHei", "微軟雅黑", Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .report-section {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .report-section h2 {
+    margin-top: 0;
+  }
+  .stat-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .stat-box span {
+    font-size: 18px;
+  }
+  .popular-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .popular-content a {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  .popular-content a img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  .popular-content .content-info {
+    flex: 1;
+  }
+  .popular-content .stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .popular-content .stats span {
+    display: flex;
+    align-items: center;
+  }
+  .popular-content .stats span:before {
+    content: "🔍";
+    margin-right: 5px;
+  }
+  .popular-content .stats span:nth-child(2):before {
+    content: "👍";
+  }
+  .popular-content .stats span:nth-child(3):before {
+    content: "💬";
+  }
   </style>
 </head>
 
