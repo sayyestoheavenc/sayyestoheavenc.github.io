@@ -1,235 +1,260 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378294033772734"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378294033772734"
     crossorigin="anonymous"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCJHERRHRE"></script>
-<meta charset="UTF-8">
-<title>Threads 洞察報告</title>
-<style>
-  body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .report-container {
-    width: 90%;
-    max-width: 800px;
-  }
-  
-  .report-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .stat-box {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .stat-box h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  .stat-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+  <meta charset="UTF-8">
+  <title>Threads 洞察報告</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 40px;
-}
+    .report-container {
+      width: 90%;
+      max-width: 800px;
+    }
 
-.stat-label {
-  font-size: 16px;
-  color: #999;
-  margin-bottom: 5px;
-}
+    .report-title {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-.stat-value {
-  font-size: 32px;
-}
+    .stat-box {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .stat-box h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 40px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+
+    .stat-value {
+      font-size: 32px;
+    }
 
 
-  .popular-content {
-    background-color: #222;
-    padding: 20px;
-  }
-  
-  .popular-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .popular-content .content-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .popular-content .content-image {
-    width: 120px;
-    height: 120px;
-    flex-shrink: 0;
-    margin-right: 20px;
-  }
-  
-  .popular-content .content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .popular-content .content-info {
-    flex-grow: 1;
-  }
-  
-  .popular-content .content-info span {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .popular-content .stats {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-  }
-  
-  .popular-content .stats .stat-item {
-    display: flex;
-    align-items: center;
-    color: #fff; /* 設置圖標顏色為白色 */
-  }
-  
-  .popular-content .stats .stat-item:before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 5px;
-    filter: brightness(100%); /* 設置圖標亮度為100% */
-  }
-  
-  .popular-content .stats .views:before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E");
-  }
-  
-  .popular-content .stats .likes:before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
-  }
-  
-  .popular-content .stats .comments:before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z'/%3E%3C/svg%3E");
-  }
-</style>
+    .popular-content {
+      background-color: #222;
+      padding: 20px;
+    }
+
+    .popular-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .popular-content .content-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .popular-content .content-image {
+      width: 120px;
+      height: 120px;
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
+
+    .popular-content .content-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .popular-content .content-info {
+      flex-grow: 1;
+    }
+
+    .popular-content .content-info span {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .popular-content .stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .popular-content .stats .stat-item {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      /* 設置圖標顏色為白色 */
+    }
+
+    .popular-content .stats .stat-item:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 5px;
+      filter: brightness(100%);
+      /* 設置圖標亮度為100% */
+    }
+
+    .popular-content .stats .views:before {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E");
+    }
+
+    .popular-content .stats .likes:before {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+    }
+
+    .popular-content .stats .comments:before {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z'/%3E%3C/svg%3E");
+    }
+  </style>
 </head>
+
 <body>
-<div class="report-container">
-  <h1 class="report-title">Threads 洞察報告</h1>
-  <div class="stat-box">
-    <h2>9萬</h2>
-    <span>瀏覽次數</span>
-  </div>
-  <div class="stat-row">
-  <div class="stat-row">
-  <div class="stat-item">
-    <span class="stat-label">互動次數</span>
-    <span class="stat-value">9萬</span>
-  </div>
-  <div class="stat-item">
-    <span class="stat-label">粉絲人數</span>
-    <span class="stat-value">669</span>
-  </div>
-</div>
+  <div class="report-container">
+    <h1 class="report-title">Threads 洞察報告</h1>
+    <div class="stat-box">
+      <h2>9萬</h2>
+      <span>瀏覽次數</span>
+    </div>
+    <div class="stat-row">
+      <div class="stat-row">
+        <div class="stat-item">
+          <span class="stat-label">互動次數</span>
+          <span class="stat-value">9萬</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">粉絲人數</span>
+          <span class="stat-value">669</span>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-  <div class="popular-content">
-    <h2>熱門內容</h2>
-    <div class="content-item">
-      <div class="content-image">
-        <img src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764764093/hot1_fhp4kw.jpg" alt="熱門內容 1">
-      </div>
-      <div class="content-info">
-        <span>看了哈哈台最新集 王宇婕因為太常忘記帶鑰匙 ...</span>
-        <div class="stats">
-          <div class="stat-item views">273萬</div>
-          <div class="stat-item likes">2.3萬</div>
-          <div class="stat-item comments">262</div>
+    <div class="popular-content">
+      <h2>熱門內容</h2>
+      <div class="content-item">
+        <div class="content-image">
+          <img src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764764093/hot1_fhp4kw.jpg"
+            alt="熱門內容 1">
+        </div>
+        <div class="content-info">
+          <span>看了哈哈台最新集 王宇婕因為太常忘記帶鑰匙 ...</span>
+          <div class="stats">
+            <div class="stat-item views">273萬</div>
+            <div class="stat-item likes">2.3萬</div>
+            <div class="stat-item comments">262</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content-item">
-      <div class="content-image">
-        <img src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766826/583273292_17925745386160611_2502678829142355783_n.webp_f9ewxb.webp" alt="熱門內容 2">
-      </div>
-      <div class="content-info">
-        <span>冷知識:抽菸的女性會提早進入更年期</span>
-        <div class="stats">
-          <div class="stat-item views">40萬</div>
-          <div class="stat-item likes">5,436</div>
-          <div class="stat-item comments">194</div>
+      <div class="content-item">
+        <div class="content-image">
+          <img
+            src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766826/583273292_17925745386160611_2502678829142355783_n.webp_f9ewxb.webp"
+            alt="熱門內容 2">
+        </div>
+        <div class="content-info">
+          <span>冷知識:抽菸的女性會提早進入更年期</span>
+          <div class="stats">
+            <div class="stat-item views">40萬</div>
+            <div class="stat-item likes">5,436</div>
+            <div class="stat-item comments">194</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content-item">
-      <div class="content-image">
-        <img src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766880/579560746_17925224502160611_1004884649158064788_n.webp_imkomw.webp" alt="熱門內容 3">
-      </div>
-      <div class="content-info">
-        <span>前一位乘客真的是人類嗎 ...?</span>
-        <div class="stats">
-          <div class="stat-item views">14萬</div>
-          <div class="stat-item likes">2,786</div>
-          <div class="stat-item comments">31</div>
+      <div class="content-item">
+        <div class="content-image">
+          <img
+            src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766880/579560746_17925224502160611_1004884649158064788_n.webp_imkomw.webp"
+            alt="熱門內容 3">
+        </div>
+        <div class="content-info">
+          <span>前一位乘客真的是人類嗎 ...?</span>
+          <div class="stats">
+            <div class="stat-item views">14萬</div>
+            <div class="stat-item likes">2,786</div>
+            <div class="stat-item comments">31</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content-item">
-      <div class="content-image">
-        <img src="https://via.placeholder.com/120x120" alt="熱門內容 4">
-      </div>
-      <div class="content-info">
-        <span>他交了一個新女友Shelly Shelly讓他把所有女性朋友的聯絡方式都刪掉 ...</span>
-        <div class="stats">
-          <div class="stat-item views">10萬</div>
-          <div class="stat-item likes">776</div>
-          <div class="stat-item comments">37</div>
+      <div class="content-item">
+        <div class="content-image">
+          <img
+            src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766903/589912267_17927385444160611_4123963435803553587_n.jpg_vjr1h5.jpg"
+            alt="熱門內容 4">
+        </div>
+        <div class="content-info">
+          <span>他交了一個新女友Shelly Shelly讓他把所有女性朋友的聯絡方式都刪掉 ...</span>
+          <div class="stats">
+            <div class="stat-item views">10萬</div>
+            <div class="stat-item likes">776</div>
+            <div class="stat-item comments">37</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="content-item">
-      <div class="content-image">
-        <img src="https://via.placeholder.com/120x120" alt="熱門內容 5">
-      </div>
-      <div class="content-info">
-        <span>跟懷孕的友人踏上滿載的捷運 我直接大喊 ...</span>
-        <div class="stats">
-          <div class="stat-item views">8.7萬</div>
-          <div class="stat-item likes">1,719</div>
-          <div class="stat-item comments">253</div>
+      <div class="content-item">
+        <div class="content-image">
+          <img
+            src="https://res.cloudinary.com/dfzjtpp8f/image/upload/c_fill,w_400,h_400/v1764766903/589912267_17927385444160611_4123963435803553587_n.jpg_vjr1h5.jpg"
+            alt="熱門內容 5">
         </div>
+        <div class="content-info">
+          <span>跟懷孕的友人踏上滿載的捷運 我直接大喊 ...</span>
+          <div class="stats">
+            <div class="stat-item views">8.7萬</div>
+            <div class="stat-item likes">1,719</div>
+            <div class="stat-item comments">253</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-item">
+
+        <span>臣亮言：先帝創業未半，而中道崩殂；今天下三分，益州疲敝，此誠危急存亡之秋也。然侍衛之臣，不懈于內；忠志之士，忘身于外者：蓋追先帝之殊遇，欲報之于陛下也。誠宜開張圣听，以光先帝遺德，恢弘志士之气；不宜妄自菲薄，引喻失義，以塞忠諫之路也。宮中府中，俱為一体；陟罰臧否，不宜异同：若有作奸犯科，及為忠善者，宜付有司，論其刑賞，以昭陛下平明之治；不宜偏私，使內外异法也。侍中、侍郎郭攸之、費依、董允等，此皆良實，志慮忠純，是以先帝簡拔以遺陛下：愚以為宮中之事，事無大小，悉以咨之，然后施行，必得裨補闕漏，有所廣益。將軍向寵，性行淑均，曉暢軍事，試用之于昔日，先帝稱之曰“能”，是以眾議舉寵為督：愚以為營中之事，事無大小，悉以咨之，必能使行陣和穆，优劣得所也。親賢臣，遠小人，此先漢所以興隆也；親小人，遠賢臣，此后漢所以傾頹也。先帝在時，每与臣論此事，未嘗不歎息痛恨于桓、靈也！侍中、尚書、長史、參軍，此悉貞亮死節之臣也，愿陛下親之、信之，則漢室之隆，可計日而待也。
+
+          　　臣本布衣，躬耕南陽，苟全性命于亂世，不求聞達于諸侯。先帝不以臣卑鄙，猥自枉屈，三顧臣于草廬之中，諮臣以當世之事，由是感激，遂許先帝以驅馳。后值傾覆，受任于敗軍之際，奉命于危難之間：爾來二十有一年矣。先帝知臣謹慎，故臨崩寄臣以大事也。受命以來，夙夜憂慮，恐付托不效，以傷先帝之明；故五月渡瀘，深入不毛。今南方已定，甲兵已足，當獎帥三軍，北定中原，庶竭駑鈍，攘除奸凶，興复漢室，還于舊都：此臣所以報先帝而忠陛下之職分也。至于斟酌損益，進盡忠言，則攸之、依、允等之任也。愿陛下托臣以討賊興复之效，不效則治臣之罪，以告先帝之靈；若無興复之言，則責攸之、依、允等之咎，以彰其慢。陛下亦宜自謀，以諮諏善道，察納雅言，深追先帝遺詔。臣不胜受恩感激！今當遠离，臨表涕泣，不知所云。
+
+        </span>
+
       </div>
     </div>
   </div>
-</div>
+  </div>
 </body>
+
 </html>
