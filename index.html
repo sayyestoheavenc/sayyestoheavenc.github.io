@@ -1,23 +1,235 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378294033772734"
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378294033772734"
     crossorigin="anonymous"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCJHERRHRE"></script>
+<meta charset="UTF-8">
+<title>Threads 洞察報告</title>
+<style>
+  body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .report-container {
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .report-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .stat-box {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .stat-box h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .stat-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/favicon-32x32-CwTrRsei.png" sizes="32x32">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-BbDUH7u4.ico">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caroline's</title>
-  <script type="module" crossorigin src="/assets/index-7ec_LGr9.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Bcxm54S_.css">
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 32px;
+}
+
+
+  .popular-content {
+    background-color: #222;
+    padding: 20px;
+  }
+  
+  .popular-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .popular-content .content-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .popular-content .content-image {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .popular-content .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .popular-content .content-info {
+    flex-grow: 1;
+  }
+  
+  .popular-content .content-info span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .popular-content .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .popular-content .stats .stat-item {
+    display: flex;
+    align-items: center;
+    color: #fff; /* 設置圖標顏色為白色 */
+  }
+  
+  .popular-content .stats .stat-item:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    filter: brightness(100%); /* 設置圖標亮度為100% */
+  }
+  
+  .popular-content .stats .views:before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z'/%3E%3C/svg%3E");
+  }
+  
+  .popular-content .stats .likes:before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+  }
+  
+  .popular-content .stats .comments:before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z'/%3E%3C/svg%3E");
+  }
+</style>
 </head>
-
 <body>
-  <div id="root"></div>
-</body>
+<div class="report-container">
+  <h1 class="report-title">Threads 洞察報告</h1>
+  <div class="stat-box">
+    <h2>9萬</h2>
+    <span>瀏覽次數</span>
+  </div>
+  <div class="stat-row">
+  <div class="stat-row">
+  <div class="stat-item">
+    <span class="stat-label">互動次數</span>
+    <span class="stat-value">9萬</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-label">粉絲人數</span>
+    <span class="stat-value">669</span>
+  </div>
+</div>
 
+</div>
+
+  <div class="popular-content">
+    <h2>熱門內容</h2>
+    <div class="content-item">
+      <div class="content-image">
+        <img src="https://via.placeholder.com/120x120" alt="熱門內容 1">
+      </div>
+      <div class="content-info">
+        <span>看了哈哈台最新集 王宇婕因為太常忘記帶鑰匙 ...</span>
+        <div class="stats">
+          <div class="stat-item views">273萬</div>
+          <div class="stat-item likes">2.3萬</div>
+          <div class="stat-item comments">262</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="content-image">
+        <img src="https://via.placeholder.com/120x120" alt="熱門內容 2">
+      </div>
+      <div class="content-info">
+        <span>冷知識:抽菸的女性會提早進入更年期</span>
+        <div class="stats">
+          <div class="stat-item views">40萬</div>
+          <div class="stat-item likes">5,436</div>
+          <div class="stat-item comments">194</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="content-image">
+        <img src="https://via.placeholder.com/120x120" alt="熱門內容 3">
+      </div>
+      <div class="content-info">
+        <span>前一位乘客真的是人類嗎 ...?</span>
+        <div class="stats">
+          <div class="stat-item views">14萬</div>
+          <div class="stat-item likes">2,786</div>
+          <div class="stat-item comments">31</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="content-image">
+        <img src="https://via.placeholder.com/120x120" alt="熱門內容 4">
+      </div>
+      <div class="content-info">
+        <span>他交了一個新女友Shelly Shelly讓他把所有女性朋友的聯絡方式都刪掉 ...</span>
+        <div class="stats">
+          <div class="stat-item views">10萬</div>
+          <div class="stat-item likes">776</div>
+          <div class="stat-item comments">37</div>
+        </div>
+      </div>
+    </div>
+    <div class="content-item">
+      <div class="content-image">
+        <img src="https://via.placeholder.com/120x120" alt="熱門內容 5">
+      </div>
+      <div class="content-info">
+        <span>跟懷孕的友人踏上滿載的捷運 我直接大喊 ...</span>
+        <div class="stats">
+          <div class="stat-item views">8.7萬</div>
+          <div class="stat-item likes">1,719</div>
+          <div class="stat-item comments">253</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
