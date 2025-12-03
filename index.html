@@ -35,7 +35,30 @@
     font-size: 36px;
     margin-bottom: 10px;
   }
-  
+  .stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 32px;
+}
+
   .popular-content {
     background-color: #222;
     padding: 20px;
@@ -118,14 +141,17 @@
     <h2>9萬</h2>
     <span>瀏覽次數</span>
   </div>
-  <div class="stat-box">
-    <h2>9萬</h2>
-    <span>互動次數</span>
+  <div class="stat-row">
+  <div class="stat-item">
+    <span class="stat-label">互動次數</span>
+    <span class="stat-value">9萬</span>
   </div>
-  <div class="stat-box">
-    <h2>669</h2>
-    <span>粉絲人數</span>
+  <div class="stat-item">
+    <span class="stat-label">粉絲人數</span>
+    <span class="stat-value">669</span>
   </div>
+</div>
+
   <div class="popular-content">
     <h2>熱門內容</h2>
     <div class="content-item">
